@@ -17,9 +17,8 @@ from django.template import loader
 
 
 
-def main_page(request):
-    temp = loader.get_template('citytrainer.html')
-    return HttpResponse(temp.render(request))
+class HomePageView(TemplateView):
+    template_name =  ('modcities.html')
     
     
     

@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main import views 
+from main.views import HomePageView
 
 urlpatterns = [
-    path('', views.main_page),
+    path('', HomePageView.as_view(), name='citytrainer.html'),
+    # path('', views.main_page),
     path('admin/', admin.site.urls),
 ]
