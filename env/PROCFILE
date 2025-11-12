@@ -1,1 +1,2 @@
 web: gunicorn project.wsgi --log-file -
+scale web=1
